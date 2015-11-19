@@ -1,6 +1,6 @@
-FROM jplock/zookeeper:3.4.6
+FROM jplock/zookeeper:latest
 
-ENV ZOOKEEPER_VERSION 3.4.6
+ENV ZOOKEEPER_VERSION latest
 
 COPY run.sh /run.sh
 RUN chmod a+x /run.sh && \
