@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: zk-server-3
+spec:
+  selector:
+    zkserver: "3"
+  ports:
+  - name: client
+    protocol: TCP
+    port: 2181
+  - name: leader
+    protocol: TCP
+    port: 2888
+  - name: election
+    protocol: TCP
+    port: 3888
+
