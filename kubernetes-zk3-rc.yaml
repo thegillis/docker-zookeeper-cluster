@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: zookeeper
-        image: thegillis/docker-zookeeper-cluster:3.4.6
+        image: thegillis/zookeeper-cluster:3.4.6
         env:
         - name: SERVER_ID
           value: "3"
