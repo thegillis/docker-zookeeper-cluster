@@ -9,6 +9,14 @@ else
 	echo "Yes"
 fi
 
+echo -n "Checking if zoo.cfg needs to be hot patched to keep fewer snapshots... "
+md5sum -cs /opt/zookeeper/conf-dist/default-zoo.cfg.md5
+if [ $? -eq 0 ]
+then
+	echo "Yes"
+	cp /opt/zookeeper/conf-dist/zoo_sample.cfg /opt/zookeeper/conf/zoo.cfg
+fi
+
 echo -n "Checking if log4j.properties exists... "
 if [ ! -f /opt/zookeeper/conf/log4j.properties ]
 then

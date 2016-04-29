@@ -11,6 +11,17 @@ http://iocanel.blogspot.com/2014/10/zookeeper-on-kubernetes.html
 Unfortunately for various reasons it was not working for me. This
 is my modified version of this approach.
 
+Quickstart for Standalone Mode
+------------------------------
+
+To get zookeeper up and running quickly with minimal issues:
+
+```
+docker run -d --net=host thegillis/zookeeper-cluster
+```
+
+By default it will setup a local zookeeper with snapshot purging enabled.
+
 Running in Kubernetes
 ---------------------
 
